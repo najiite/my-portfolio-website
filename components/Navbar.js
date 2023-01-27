@@ -1,17 +1,31 @@
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect, } from "react"
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
 
 const Navbar = () => {
     const [nav, setNav] = useState(false)
+    const [color, setColor] = useState('transparent')
     const HandleNav = () => {
         setNav(!nav)
     } 
 
+    useEffect(()=>{
+        const changeColor = () => {
+            if (window.scrollY>=90) {
+                setColor('#000106')
+
+            }
+            else {
+                setColor('transparent')
+            }
+        }
+        window.addEventListener('scroll', changeColor)
+    }, [])
+
   return (
     <>
     
-        <div className="fixed top-0 left-0 w-full z-10 ease-in duration-300">
+        <div  style={{backgroundColor: `${color}`}} className="fixed top-0 left-0 w-full z-10 ease-in duration-300">
             <div className="max-w-[1240px] m-auto flex justify-between items-center text-white p-4">
                 <Link href='/'>
                     <h1  className="font-bold text-4xl">Najiite</h1>
