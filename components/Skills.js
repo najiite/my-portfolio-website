@@ -4,9 +4,9 @@ import React from 'react'
 const Skills = () => {
   return (
     <>
-        <div id='about' className='max-w-[1240px] mx-auto'>
-            <h1 className="text-2xl font-bold text-center p-4"><span className='main-Textcolor'>Skills</span> and tools</h1>
-            <div className='sm:grid sm:gap-4 sm:grid-cols-2 p-5'>
+        <div id='about' className=' bg-gray-800/20 p-5'>
+            <h1 className="text-5xl font-bold text-center p-4"><span className='main-Textcolor'>Skills</span> and tools</h1>
+            <div className='sm:grid sm:gap-4 sm:grid-cols-2 sm:p-5'>
                 <div className='justify-center'>
                     <p className='text-sm leading-loose py-5'>I am a highly skilled and motivated front-end developer with a passion for creating visually stunning and user-friendly websites. I have experience in a variety of web development technologies, including HTML, CSS, JavaScript, and responsive design. I am also familiar with front-end frameworks such as Bootstrap and TailwindCss, and have experience working with JavaScript libraries and frameworks such as React, ReactNative, NextJS and Svelte.</p>
                     <ul className='text-sm leading-loose'>
