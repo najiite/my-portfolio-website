@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    
+  html {
+      scroll-behavior: smooth;
+      font-family: Raleway, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      color: white;
+    }
+  .custom-img {
+      background-image: url('/key.jpg');
+    }
+
+  .main-Textcolor {
+    @apply text-pink-700
+  }
+
+  .lg-navElements {
+    @apply py-5 px-10 font-semibold hover:border-b-4 border-b-white
+  }
+
+  .sm-navElements {
+    @apply p-5 text-4xl font-semibold hover:border-b-4 border-b-white
+  }
+}
