@@ -1,10 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Projects = () => {
   return (
     <>
-    <div id='about' className='max-w-[1240px] mx-auto'>
+    <div id='projects' className='max-w-[1240px] mx-auto'>
         <h1 className="text-2xl font-bold text-center p-4"><span className='main-Textcolor'>Projects</span></h1>
         <div className='sm:grid sm:gap-4 sm:grid-cols-2 p-5'>
             <div className='justify-center p-10'>
@@ -12,9 +13,50 @@ const Projects = () => {
                 <Link href='https://github.com/najiite?tab=repositories' className='px-7 sm:px-[5rem] py-7 border border-pink-700 hover:bg-pink-700 hover:border-0'>View my Github page</Link>
             
             </div>
-            <div className='grid gap-3 sm:grid-cols-3 grid-cols-2 py-5'>
+            <div className='grid gap-2 sm:gap-0 sm:grid-cols-2 grid-cols-1 py-5'>
                 <div>
-                    <iframe src="https://reactjs-blog-black.vercel.app/" title="ReactJs Blog Template" />
+                    <figure class="figure-div">
+                        <a href='https://photon-three.vercel.app/'>
+                            <Image src='/projects/photon.png' width={1280} height={800}/>
+                        </a>
+                        <figcaption class="hover-image-caption">
+                            <p className='text-lg'>Photon</p>
+                            <p className='text-sm '>A simple photography portfolio website built with nextJs</p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure class="figure-div">
+                        <a  href='https://next-weather-topaz.vercel.app/'>
+                            <Image src='/projects/weather.png' width={1280} height={800}/>
+                        </a>
+                        <figcaption class="hover-image-caption">
+                            <p className='text-lg'>Weather App</p>
+                            <p className='text-sm '>A weather webapp built with NextJS</p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure class="figure-div">
+                        <a  href='https://react-realtime-chat-phi.vercel.app/'>
+                            <Image src='/projects/wixper.png' width={1280} height={800}/>
+                        </a>
+                        <figcaption class="hover-image-caption">
+                            <p className='text-lg'>Wixper</p>
+                            <p className='text-sm '>Realtime webchat app built with react and supabase</p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure class="figure-div">
+                        <a  href='https://reactjs-blog-black.vercel.app/'>
+                            <Image src='/projects/blog.png' width={1280} height={800}/>
+                        </a>
+                        <figcaption class="hover-image-caption">
+                            <p className='text-lg'>Blog </p>
+                            <p className='text-sm '>Blog template built with Reactjs and Sanity</p>
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
         </div>

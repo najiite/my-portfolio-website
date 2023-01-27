@@ -25,4 +25,12 @@
   .sm-navElements {
     @apply p-5 text-4xl font-semibold hover:border-b-4 border-b-white
   }
+
+  .hover-image-caption {
+    @apply absolute px-4 py-5 w-full bottom-0 text-center sm:opacity-0 hover:opacity-100 bg-black/80
+  }
+
+  .figure-div {
+    @apply relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale-0 hover:grayscale
+  }
 }
