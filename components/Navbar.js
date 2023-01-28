@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { useState, useEffect, } from "react"
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
+import { motion } from "framer-motion"
 
 const Navbar = () => {
     const [nav, setNav] = useState(false)
@@ -22,6 +23,31 @@ const Navbar = () => {
         window.addEventListener('scroll', changeColor)
     }, [])
 
+    const boxVariant = {
+        hidden : {
+            x: "-100vw"
+        },
+        visible : {
+            x: 0, 
+            transition: {
+                delay: 1,
+                when: "beforeChildren",
+                delayChildren: 0.5,
+                staggerChildren: 0.2 
+            }
+        } 
+    } 
+    const listVariant = {
+        hidden : {
+            x: -10,
+            opacity: 0
+        },
+        visible : {
+            x: 0,
+            opacity: 1,
+        }
+    }
+
   return (
     <>
     
@@ -32,34 +58,39 @@ const Navbar = () => {
                 </Link>
                 
                 <ul className="hidden sm:flex ">
-                    <li className="lg-navElements">
-                        <Link href='/#about'><span className="main-Textcolor">01.</span>About</Link>
-                    </li>
-                    <li className="lg-navElements">
+                    <motion.li className="lg-navElements"  whileHover={{scale: 1.2}}>
+                        <Link href='/#about'><span className="main-Textcolor">01.</span><motion.span>About</motion.span></Link>
+                    </motion.li>
+                    <motion.li className="lg-navElements"  whileHover={{scale: 1.2}}>
                         <Link href='/#projects'><span className="main-Textcolor">02.</span>Projects</Link>
-                    </li>
-                    <li className="lg-navElements">
+                    </motion.li>
+                    <motion.li className="lg-navElements"  whileHover={{scale: 1.2}}>
                         <Link href='/#contact'><span className="main-Textcolor">03.</span>Contact</Link>
-                    </li>
+                    </motion.li>
                 </ul>
                 <div className="sm:hidden block z-10">
                     { nav ? <AiOutlineClose size={20} onClick={HandleNav}  style={{color: `white`}}/> : <AiOutlineMenu size={20}  onClick={HandleNav} />}
                     
                 </div>
-                <div className={nav ?"sm:hidden absolute top-0 left-0 bottom-0 right-0 flex justify-center items-center w-full h-screen bg-[#000822] text-center ease-in duration-300": "sm:hidden absolute top-0 left-[-100%] bottom-0 right-0 flex justify-center items-center w-full h-screen bg-[#000822] text-center ease-in duration-300" }>
+                <motion.div 
+                    className={nav ?"sm:hidden absolute top-0 left-0 bottom-0 right-0 flex justify-center items-center w-full h-screen bg-[#000822] text-center ease-in duration-300": "sm:hidden absolute top-0 left-[-100%] bottom-0 right-0 flex justify-center items-center w-full h-screen bg-[#000822] text-center ease-in duration-300" } 
+                    variants={boxVariant}
+                    initial="hidden"
+                    animate="visible"
+            >
                     <ul>
-                        <li onClick={HandleNav}  className="sm-navElements">
+                        <motion.li onClick={HandleNav}  className="sm-navElements" variants={listVariant}>
                             <Link href='/#about'><span className="main-Textcolor">01.</span>About</Link>
-                        </li>
-                        <li onClick={HandleNav}  className="sm-navElements">
+                        </motion.li>
+                        <motion.li onClick={HandleNav}  className="sm-navElements" variants={listVariant}>
                             <Link href='/#projects'><span className="main-Textcolor">02.</span>Projects</Link>
-                        </li>
-                        <li onClick={HandleNav}  className="sm-navElements">
+                        </motion.li>
+                        <motion.li onClick={HandleNav}  className="sm-navElements" variants={listVariant}>
                             <Link href='/#contact'><span className="main-Textcolor">03.</span>Contact</Link>
-                        </li>
+                        </motion.li>
                     </ul>
 
-                </div>
+                </motion.div>
             </div>
         </div>
     </>

@@ -5,13 +5,13 @@ import Image from 'next/image'
 const Projects = () => {
   return (
     <>
-    <div id='projects' className='max-w-[1240px] m-auto'>
+    <div id='projects' className='relative max-w-[1240px] m-auto'>
         <h1 className="text-5xl font-bold text-center pt-10"><span className='main-Textcolor'>Projects</span></h1>
         <div className='sm:grid sm:gap-4 sm:grid-cols-2 p-5'>
-            <div className='items-center justify-center p-10'>
-                <p className='text-xl leading-loose py-10'>Take a look at some of my recent projects</p>  
+            <div className='items-center justify-center p-10 '>
+                <p className='text-xl leading-loose py-10 z-[10]'>Take a look at some of my recent projects</p>  
                 <Link href='https://github.com/najiite?tab=repositories' className='px-4 sm:px-[5rem] py-7 border border-pink-700 hover:bg-pink-700 hover:border-0'>View my Github page</Link>
-            
+              
             </div>
             <div className='grid gap-2 sm:gap-0 sm:grid-cols-2 grid-cols-1 py-5'>
                 <div>
@@ -52,7 +52,7 @@ const Projects = () => {
                         <a  href='https://reactjs-blog-black.vercel.app/'>
                             <Image src='/projects/blog.png' width={1280} height={800}/>
                         </a>
-                        <figcaption class="hover-image-caption">
+                        <figcaption className="hover-image-caption">
                             <p className='text-lg'>Blog </p>
                             <p className='text-sm '>Blog template built with Reactjs and Sanity</p>
                         </figcaption>

@@ -13,6 +13,12 @@
   .custom-img {
       background-image: url('/key.jpg');
     }
+  .projects {
+    background-image:  url('/geom.png');
+  }
+  .float {
+    background-image:  url('/float.png');
+  }
 
   .main-Textcolor {
     @apply text-pink-700
