@@ -16,7 +16,7 @@ const Skills = () => {
   return (
     <>
     <div className='bg-fixed bg-center bg-contain float'>
-        <div id='about' className=' bg-black/80 p-5'>
+        <div id='about' className=' bg-black/75 p-5'>
             <h1 className="text-5xl font-bold text-center p-4"><span className='main-Textcolor'>Skills</span> and tools</h1>
             <div className='sm:grid sm:gap-4 sm:grid-cols-2 sm:p-5'>
                 <div className='justify-center'>
