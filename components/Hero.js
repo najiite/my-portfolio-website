@@ -20,7 +20,7 @@ const Hero = () => {
 
   return (
     <>
-        <div className='flex items-center justify-start h-screen mb-12 bg-fixed bg-center bg-cover bg-no-repeat custom-img'>
+        <div className='flex items-center justify-start lg:h-screen mb-12 bg-fixed bg-center bg-cover bg-no-repeat custom-img'>
             <div className='absolute top-0 bottom-0 left-0 right-0 bg-black/60 z-[2]'></div>
             <div className='py-7 sm:px-[15rem] px-[3rem] text-white z-[2]'>
                 <motion.h2 
