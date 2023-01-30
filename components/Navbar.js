@@ -25,12 +25,16 @@ const Navbar = () => {
 
     const boxVariant = {
         hidden : {
-            x: "-100vw"
+            x: "-100vw",
+            y: "-100vw",
+            borderRadius: "50%"
         },
         visible : {
             x: 0, 
+            y: 0,
+            borderRadius: "0%",
             transition: {
-                delay: 1,
+                duration: 1,
                 when: "beforeChildren",
                 delayChildren: 0.5,
                 staggerChildren: 0.2 
@@ -76,7 +80,7 @@ const Navbar = () => {
                     className={nav ?"sm:hidden absolute top-0 left-0 bottom-0 right-0 flex justify-center items-center w-full h-screen bg-[#000822] text-center ease-in duration-300": "sm:hidden absolute top-0 left-[-100%] bottom-0 right-0 flex justify-center items-center w-full h-screen bg-[#000822] text-center ease-in duration-300" } 
                     variants={boxVariant}
                     initial="hidden"
-                    animate="visible"
+                    whileInView="visible"
             >
                     <ul>
                         <motion.li onClick={HandleNav}  className="sm-navElements" variants={listVariant}>

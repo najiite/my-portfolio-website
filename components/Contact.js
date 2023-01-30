@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaWhatsapp, FaTwitter, FaPhone, FaEnvelope } from "react-icons/fa";
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   return (
@@ -18,16 +19,16 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-            <div className='max-w-[1240px] m-auto'>
+            <div className='bg-gradient-to-r from-[#000106] to-[#20020f]'>
 
                         <p className='text-center text-4xl font-semibold p-10'>Contact Me</p>
-                        <div className='sm:grid sm:grid-cols-2'>
+                        <motion.div className='sm:grid sm:grid-cols-2' initial={{ opacity: 0, scale: 0.2}} whileInView={{ opacity: 1, scale: 1}} transition={{ duration: 2}}>
                                 
                             <p className='flex items-stretch p-5'><FaPhone size={30}/> <a href='tel:+2348038895261' className='text-3xl mx-5 hover:main-Textcolor'>+234 803 889 5261</a></p>
                             <p className='flex items-stretch p-5'><FaEnvelope size={35}/> <a href='mailto:onajiteokeh@gmail.com' className='text-2xl mx-5 hover:main-Textcolor'>onajiteokeh@gmail.com</a></p>
                             <p className='flex items-stretch p-5'><FaWhatsapp size={35}/> <a href='https://wa.me/2348038895261' className='text-3xl mx-5 hover:main-Textcolor'>Message me on WhatsApp</a></p>
                             <p className='flex items-stretch p-5'><FaTwitter size={35}/> <a href='https://twitter.com/najiite' className='text-3xl mx-5 hover:main-Textcolor'>@najiite</a></p>
-                        </div>
+                        </motion.div>
             </div>
             
         </div>

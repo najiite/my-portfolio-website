@@ -3,14 +3,19 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 const Skills = () => {
-    const listVariant = {
-        hidden : {
-            x: -10,
+    const listVariants = {
+        hidden: {
+            x: -100,
             opacity: 0
         },
-        visible : {
+        show: {
             x: 0,
             opacity: 1,
+            transition: {
+                duration: 1.5,
+                delayChildren: 0.5
+            }
+
         }
     }
   return (
@@ -21,14 +26,14 @@ const Skills = () => {
             <div className='sm:grid sm:gap-4 sm:grid-cols-2 sm:p-5'>
                 <div className='justify-center'>
                     <p className='text-sm leading-loose py-5'>I am a highly skilled and motivated front-end developer with a passion for creating visually stunning and user-friendly websites. I have experience in a variety of web development technologies, including HTML, CSS, JavaScript, and responsive design. I am also familiar with front-end frameworks such as Bootstrap and TailwindCss, and have experience working with JavaScript libraries and frameworks such as React, ReactNative, NextJS and Svelte.</p>
-                    <ul className='text-sm leading-loose'>
-                        <motion.li initial whileInView={{listVariant}}><span className="main-Textcolor">01.</span>Proficiency in HTML, CSS, and </motion.li>
-                        <li><span className="main-Textcolor">02.</span>Experience with responsive design and mobile optimization</li>
-                        <li><span className="main-Textcolor">03.</span>Familiarity with front-end frameworks such as Bootstrap or Foundation</li>
-                        <li><span className="main-Textcolor">04.</span>Knowledge of web development tools such as Git and Webpack</li>
-                        <li><span className="main-Textcolor">05.</span>Experience with JavaScript libraries and frameworks such as React or Angular</li>
-                        <li><span className="main-Textcolor">06.</span>Experience with accessibility and web standards</li>
-                    </ul>
+                    <motion.ul className='text-sm leading-loose'>
+                        <motion.li  variants={listVariants} initial="hidden" whileInView="show"><span className="main-Textcolor">01.</span>Proficiency in HTML, CSS, and </motion.li>
+                        <motion.li variants={listVariants} initial="hidden" whileInView="show"><span className="main-Textcolor">02.</span>Experience with responsive design and mobile optimization</motion.li>
+                        <motion.li variants={listVariants} initial="hidden" whileInView="show"><span className="main-Textcolor">03.</span>Familiarity with front-end frameworks such as Bootstrap or Foundation</motion.li>
+                        <motion.li  variants={listVariants} initial="hidden" whileInView="show"><span className="main-Textcolor">04.</span>Knowledge of web development tools such as Git and Webpack</motion.li>
+                        <motion.li  variants={listVariants} initial="hidden" whileInView="show"><span className="main-Textcolor">05.</span>Experience with JavaScript libraries and frameworks such as React or Angular</motion.li>
+                        <motion.li  variants={listVariants} initial="hidden" whileInView="show"><span className="main-Textcolor">06.</span>Experience with accessibility and web standards</motion.li>
+                    </motion.ul>
                 </div>
                 <div className='grid gap-3 sm:grid-cols-3 grid-cols-2 py-5'>
                     <div className='grid grid-rows-none gap-4 justify-center bg-neutral-900 hover:bg-gray-700/50 p-5 rounded-xl'>
