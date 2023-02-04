@@ -30,12 +30,12 @@ const Projects = () => {
                 </motion.div>
                 <motion.div initial={{ scale: 0.2}} whileInView={{ scale: 1}} transition={{ duration: 2}}>
                     <figure className="figure-div">
-                        <a  href='https://next-weather-topaz.vercel.app/'>
-                            <Image src='/projects/weather.png' width={1280} height={800}/>
+                        <a  href='https://hotel-gold.vercel.app/'>
+                            <Image src='/projects/hotel.png' width={1280} height={800}/>
                         </a>
                         <figcaption className="hover-image-caption">
-                            <p className='text-lg'>Weather App</p>
-                            <p className='text-sm '>A weather webapp built with NextJS</p>
+                            <p className='text-lg'>La Belle Vue Hotel</p>
+                            <p className='text-sm '>A luxury hotel landing page</p>
                         </figcaption>
                     </figure>
                 </motion.div>
