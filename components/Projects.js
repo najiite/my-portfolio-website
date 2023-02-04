@@ -35,7 +35,7 @@ const Projects = () => {
                         </a>
                         <figcaption className="hover-image-caption">
                             <p className='text-lg'>La Belle Vue Hotel</p>
-                            <p className='text-sm '>A luxury hotel landing page</p>
+                            <p className='text-sm '>A luxury hotel landing page built with NextJs and TailwindCss</p>
                         </figcaption>
                     </figure>
                 </motion.div>
